@@ -14,7 +14,7 @@
      print'<tr>';
        foreach ($row as $item){
          print'<td>'.
-           ($item ? htmlentities($item):'$nbsp;').'</td>';
+           ($item ? htmlentities($item):'&nbsp;').'</td>';
    }
      print'</tr>';
   }
