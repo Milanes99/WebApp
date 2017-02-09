@@ -9,14 +9,15 @@
    $r = oci_execute($stid,OCI_DEFAULT);
    
    print'<table border = "1">';
-   while ($row=oci_fetch-array($stid,OCI_ASSOC + OCI_RETURN_NULLS ))
+   while ($row=oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS ))
    {
-     print'<tr>'
-       foreach($row as $item){
-         print'<td>'
+     print'<tr>';
+       foreach ($row as $item){
+         print'<td>'.
            ($item ? htmlentities($item):'$nbsp;').'</td>';
    }
-     print'</tr>'
+     print'</tr>';
   }
-   print'</table>'
+   print'</table>';
+ }
 ?>
