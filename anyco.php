@@ -2,7 +2,7 @@
   require('anyco_ui.inc');
    $conn = oci_connect('hr','hr','//localhost/XE');
    ui_print_header('Department');
-   de_query($conn,'SELECT * FROM DEPARTMENT');
+   de_query($conn,'SELECT * FROM DEPARTMENTS');
    ui_print_footer(date('Y-m-d H:i:s'));
  function de_query($conn,$query){
    $stid = oci_parse($conn,$query);
