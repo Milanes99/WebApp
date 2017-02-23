@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Activity 8</title>
+	<script language ="javascript" type="text/javascript">
+	<!--
+		function countdown(){
+			var retValTime = prompt("Enter a number:","your number in milleseconds")
+			for (var i=retValTime; i>=0; i--)
+			{
+				document.write("<br>"+i);
+			}
+		}
+		function timer(){
+			var retValTime = prompt("Enter a number:","your number in milleseconds")
+			setTimeout("location.reload(true)",retValTime);		
+		}
+	//-->
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="Start Countdown" onclick="countdown()"/><br>
+<input type="button" value="Timer Start" onclick="timer()"/>
+</form>
+</body>
+</html>
