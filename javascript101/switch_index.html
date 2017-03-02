@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Activity 9</title>
@@ -6,22 +5,41 @@
 <body>
 	 <script type="text/javascript">
 	 <!--
-	 	var grade = 'D'
+		var status = true
+		while (status == "true"){
+	 	var grade = prompt("Enter your Grade: ","Your Grade");
+	 		if (!isNaN(grade)) {
+	 			status = false;
+	 		}else{
+	 			status =true;
+	 		}
 	 	document.write("Enter Switch block <br/>");
-	 	switch(grade)
+	 	switch(true)
 	 	{
-	 		case 'A' : document.write("Good Job <br/>");
+	 		case ((grade <=100)&&(grade >=96)) : document.write("A+ <br/>"); status = false;
 	 			break;
-	 		case 'B' : document.write("Pretty Good <br/>");
+	 		case ((grade <=95)&&(grade >=91)) : document.write("A <br/>"); status = false;
 	 			break;
-	 		case 'C' : document.write("Passed <br/>");
+	 		case ((grade <=90)&&(grade >=86)) : document.write("A- <br/>"); status = false;
 	 			break;
-	 		case 'D' : document.write("Dropped <br/>");
+	 		case ((grade <=89)&&(grade >=81)) : document.write("B+ <br/>"); status = false;
 	 			break;
-	 		case 'F' : document.write("Failed <br/>");
+	 		case ((grade <=80)&&(grade >=75)) : document.write("B <br/>"); status = false;
 	 			break;
-	 		default: document.write("Re-enter correct grade");
-	 	}
+	 		case ((grade <=74)&&(grade >=69)) : document.write("B- <br/>"); status = false;
+	 			break;
+	 	    case ((grade <=68)&&(grade >=63)) : document.write("C+ <br/>"); status = false;
+	 			break;
+	 		case ((grade <=62)&&(grade >=57)) : document.write("C <br/>"); status = false;
+	 			break;
+	 		case ((grade <=58)&&(grade >=50)) : document.write("C- <br/>"); status = false;
+	 			break;
+	 		case (grade <=49) : document.write("F <br/>"); status = false;
+	 			break;		
+	 		default: alert("Re-enter correct grade"); status = true;
+	 		break;
+			}
+		}
 	 		document.write("Exiting switch block <br/>");
 	 //-->
 </script>
