@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Machine problem 5</title>
+	<script type="text/javascript">
+	<!--
+	window.score = 0
+		function answer(){
+			var retValanswer = prompt("Enter your Answer:","Your Answer")
+			if ((retValanswer == "butterfly")||(retValanswer == "bat")||(retValanswer == "moth")) {
+				 alert("You are Normal");
+				window.score++;
+				 alert(score);
+     		}else{
+				alert("You are Addict") 
+			}
+			window.location="index5.html"
+		}
+	//-->
+	</script>
+<style>
+form {
+    border: 3px solid #f1f1f1;
+}
+	.imgcontainer {
+    text-align: center;
+    margin: 50px 0 12px 0;
+}
+img.avatar {
+    width: 40%;
+    border-radius: 0%;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+<form method="post", action="#">
+  <div class="imgcontainer"> 
+    <img src="butterfly.jpg" alt="Avatar" class="avatar">
+  </div>	 
+	<input type="button" value="Click here" onclick="answer()"/>
+</form>
+</body>
+</html>
