@@ -1,0 +1,190 @@
+<html>
+	<head>
+		<title>Machine Problem 5</title>
+	</head>
+<body>
+
+<img id='image' src="1.jpg" style="background-size: 100% 100%;">
+<br>
+<input type="button" value="Answer me" onclick="answerme();">
+<script type='text/javascript'>
+
+var scene = 1;
+var number = 0;
+var correct = 0;
+var wrong = 0;
+
+function answerme(){
+
+	var flag = true;
+
+	while (flag){
+
+	var answer = prompt("Enter your answer");
+		if (!isNaN(answer)){
+			answer = "isanumber";
+		}
+
+
+	switch(scene){
+		case 1: 	
+			switch(answer){ 
+				case "human": alert("You're Normal");
+				document.getElementById("image").src="2.jpg";
+				scene = scene + 1;
+				flag = false;
+				correct = correct + 1;
+				break;
+
+				case "isanumber":
+				if (number >= 3){
+					document.documentElement.innerHTML = '';
+					document.write("<h5>Calling 911!</h5>");
+					flag = false;
+				}else{
+					number = number + 1;
+					flag = true;
+				}
+				break;
+
+				case null:
+				flag = false;
+				break;
+
+				default: alert("You're an Addict");
+					flag = false;
+					scene = scene + 1;
+					wrong = wrong + 1;
+					document.getElementById("image").src="2.jpg";
+				break;
+			}
+		break;
+
+		case 2:
+			switch(answer){ 
+					case "bat":
+					case "butterfly": 
+					case "moth": alert("You're Normal");
+					document.getElementById("image").src="3.jpg";
+					scene = scene + 1;
+					flag = false;
+					correct = correct + 1;
+					break;
+
+					case "isanumber":
+					if (number >= 3){
+						document.documentElement.innerHTML = '';
+						document.write("<h5>Calling 911!</h5>");
+						flag = false;
+					}else{
+						number = number + 1;
+						flag = true;
+					}
+					break;
+
+					case "null":
+					flag = false;
+					break;
+
+					default: alert("You're an Addict");
+					flag = false;
+					scene = scene + 1;
+					wrong = wrong + 1;
+					document.getElementById("image").src="3.jpg";
+					break;
+			}
+		break;
+
+		case 3:
+			switch(answer){ 
+					case "animal hide": 
+					case "skin": 
+					case "rug": alert("You're Normal");
+					document.getElementById("image").src="4.jpg";
+					scene = scene + 1;
+					flag = false;
+					correct = correct + 1;
+					break;
+
+					case "isanumber":
+					if (number >= 3){
+						document.documentElement.innerHTML = '';
+						document.write("<h5>Calling 911!</h5>");
+						flag = false;
+					}else{
+						number = number + 1;
+						flag = true;
+					}
+					break;
+
+					case "null":
+					flag = false;
+					break;
+
+					default: alert("You're an Addict");
+					flag = false;
+					scene = scene + 1;
+					wrong = wrong + 1;
+					document.getElementById("image").src="4.jpg";
+					break;
+			}
+		break;
+
+		case 4:
+			switch(answer){
+					case "crab": 
+					case "lobster": 
+					case "spider": alert("You're Normal");
+					scene = scene + 1;
+					flag = false;
+					correct = correct + 1;
+					break;
+
+					case "isanumber":
+					if (number >= 3){
+						document.documentElement.innerHTML = '';
+						document.write("<h5>Calling 911!</h5>");
+						flag = false;
+					}else{
+						number = number + 1;
+						flag = true;
+					}
+					break;
+
+					case "null":
+					flag = false;
+					break;
+
+					default: alert("You're an Addict");
+					flag = false;
+					scene = scene + 1;
+					wrong = wrong + 1;
+					break;
+			}
+
+		case 5:
+			var message;
+			switch (wrong){
+				case 0:
+				case 1:
+				case 2: message = "You are normal";
+				break;
+
+				case 3:
+				case 4: message =  "You are an addict!";
+				break;
+			}
+			document.documentElement.innerHTML = '';
+			document.write("<h3>Correct: " + correct + "<br>Wrong: " + wrong + "<br>" + message + "</h3>");
+			flag = false;
+		break;
+	}
+
+	}
+}
+
+
+</script>
+
+</body>
+</html>
