@@ -1,0 +1,30 @@
+<html>
+<body onload="javascript:timer()">
+
+<h1>Traffic light</h1>
+
+<img id="traffic" src="Red.png">
+
+<script>
+var list = [
+    "Red.png", 
+    "Green.png",
+    "yellow.png"
+];
+var index = 0;
+function changeLights() {
+     index = index + 1;      
+if (index == list.length) 
+index = 0;           
+
+
+var image = document.getElementById('traffic'); 
+    image.src=list[index];
+}
+
+function timer(){ setInterval(changeLights,1000);
+}
+</script>
+
+</body>
+</html>
